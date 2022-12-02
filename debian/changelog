@@ -1,4 +1,4 @@
-jemalloc (5.2.1-3pexip1) pexip; urgency=medium
+jemalloc (5.2.1-3pexip1) pexip-bullseye-openssl3; urgency=medium
 
   * Prepare Pexip packaging
 
