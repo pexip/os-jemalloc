@@ -6,7 +6,7 @@ Build-Depends:
  docbook-xml <!nodoc>,
  docbook-xsl <!nodoc>,
  xsltproc <!nodoc>,
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Section: libs
 Homepage: http://jemalloc.net/
 Vcs-Browser: https://salsa.debian.org/debian/jemalloc

@@ -1,3 +1,51 @@
+jemalloc (5.3.0-1) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Backport upstream PR to define LG_QUANTUM for the loongarch64
+    architecture. (Closes: #1024319)
+  * Switch debian/watch to the GitHub API, as the old scraping method did not
+    work anymore.
+
+ -- Faidon Liambotis <paravoid@debian.org>  Sat, 07 Jan 2023 01:29:53 +0200
+
+jemalloc (5.3.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release.
+    - Drop upstream backport patches:
+      + use-SYS_openat-when-available
+      + ARC-add-Minimum-allocation-alignment
+      + Prefer-getaffinity-to-detect-number-of-CPUs
+    - Add new C++17 symbols for over-aligned allocation symbols.
+
+ -- Faidon Liambotis <paravoid@debian.org>  Fri, 30 Dec 2022 13:29:23 +0200
+
+jemalloc (5.2.1-5) unstable; urgency=high
+
+  * Urgency high for a targeted RC bug fix.
+  * Mark the export of malloc hook symbols as optional in
+    libjemalloc2.symbols. malloc_hook APIs have been removed from glibc 2.34,
+    which results into JEMALLOC_GLIBC_MALLOC_HOOK being undefined, and those
+    symbols as not being exported. Fixes FTBFS. (Closes: #1017269)
+  * Backport upstream commit a787d2f5b, as previously
+    JEMALLOC_GLIBC_MALLOC_HOOK was used as a test for a new-enough glibc.
+    Update hurd.patch to sit on top of that change.
+  * Bump Standards-Version to 4.6.1, no changes needed.
+
+ -- Faidon Liambotis <paravoid@debian.org>  Sat, 20 Aug 2022 18:09:00 +0300
+
+jemalloc (5.2.1-4) unstable; urgency=medium
+
+  * Bump Standards-Version to 4.6.0, no changes needed.
+  * Use SYS_openat for THP when available. This prevents jemalloc from using a
+    glibc open() call as a fallback, which in turn caused a deadlock with
+    other binaries that tried to LD_PRELOAD and override open (at least
+    fakechroot). Many thanks to Aurelien Jarno for identifying the culprit,
+    identifying the upstream fix, and testing it. (Closes: #997051)
+  * Add support for the "arc" architecture. Thanks to Vineet Gupta for adding
+    the support upstream and also filing the Debian bug. (Closes: #989444)
+
+ -- Faidon Liambotis <paravoid@debian.org>  Mon, 25 Oct 2021 13:42:03 +0300
+
 jemalloc (5.2.1-3) unstable; urgency=medium
 
   * Add docbook-xml to Build-Depends, to avoid xsltproc accessing the network
