@@ -2,24 +2,41 @@ libjemalloc.so.2 libjemalloc2 #MINVER#
 * Build-Depends-Package: libjemalloc-dev
  (c++)"operator delete[](void*)@Base" 5.0.0
  (c++)"operator delete[](void*, std::nothrow_t const&)@Base" 5.0.0
+ (c++)"operator delete[](void*, std::align_val_t)@Base" 5.3.0
+ (c++)"operator delete[](void*, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
  (c++)"operator delete(void*)@Base" 5.0.0
+ (c++)"operator delete(void*, std::align_val_t)@Base" 5.3.0
+ (c++)"operator delete(void*, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
  (c++)"operator delete(void*, std::nothrow_t const&)@Base" 5.0.0
  (c++|arch-bits=32)"operator delete[](void*, unsigned int)@Base" 5.0.0
+ (c++|arch-bits=32)"operator delete[](void*, unsigned int, std::align_val_t)@Base" 5.3.0
  (c++|arch-bits=32)"operator delete(void*, unsigned int)@Base" 5.0.0
+ (c++|arch-bits=32)"operator delete(void*, unsigned int, std::align_val_t)@Base" 5.3.0
  (c++|arch-bits=32)"operator new[](unsigned int)@Base" 5.0.0
  (c++|arch-bits=32)"operator new[](unsigned int, std::nothrow_t const&)@Base" 5.0.0
+ (c++|arch-bits=32)"operator new[](unsigned int, std::align_val_t)@Base" 5.3.0
+ (c++|arch-bits=32)"operator new[](unsigned int, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
  (c++|arch-bits=32)"operator new(unsigned int)@Base" 5.0.0
  (c++|arch-bits=32)"operator new(unsigned int, std::nothrow_t const&)@Base" 5.0.0
+ (c++|arch-bits=32)"operator new(unsigned int, std::align_val_t)@Base" 5.3.0
+ (c++|arch-bits=32)"operator new(unsigned int, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
  (c++|arch-bits=64)"operator delete[](void*, unsigned long)@Base" 5.0.0
+ (c++|arch-bits=64)"operator delete[](void*, unsigned long, std::align_val_t)@Base" 5.3.0
  (c++|arch-bits=64)"operator delete(void*, unsigned long)@Base" 5.0.0
+ (c++|arch-bits=64)"operator delete(void*, unsigned long, std::align_val_t)@Base" 5.3.0
  (c++|arch-bits=64)"operator new[](unsigned long)@Base" 5.0.0
  (c++|arch-bits=64)"operator new[](unsigned long, std::nothrow_t const&)@Base" 5.0.0
+ (c++|arch-bits=64)"operator new[](unsigned long, std::align_val_t)@Base" 5.3.0
+ (c++|arch-bits=64)"operator new[](unsigned long, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
  (c++|arch-bits=64)"operator new(unsigned long)@Base" 5.0.0
  (c++|arch-bits=64)"operator new(unsigned long, std::nothrow_t const&)@Base" 5.0.0
- (arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__free_hook@Base 3.0.0
- (arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__malloc_hook@Base 3.0.0
- (arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__memalign_hook@Base 3.0.0
- (arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__realloc_hook@Base 3.0.0
+ (c++|arch-bits=64)"operator new(unsigned long, std::align_val_t)@Base" 5.3.0
+ (c++|arch-bits=64)"operator new(unsigned long, std::align_val_t, std::nothrow_t const&)@Base" 5.3.0
+# glibc 2.34 deprecated malloc hooks, and JEMALLOC_GLIBC_MALLOC_HOOK is undefined. Keep as optional to ease backports.
+ (optional|arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__free_hook@Base 3.0.0
+ (optional|arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__malloc_hook@Base 3.0.0
+ (optional|arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__memalign_hook@Base 3.0.0
+ (optional|arch=gnu-any-any gnuabi64-any-any gnuabin32-any-any gnueabi-any-any gnueabihf-any-any gnuspe-any-any gnux33-any-any)__realloc_hook@Base 3.0.0
  aligned_alloc@Base 3.0.0
  calloc@Base 2.1.1
  dallocx@Base 3.5.0

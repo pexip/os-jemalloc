@@ -1,2 +1,4 @@
 version=4
-https://github.com/jemalloc/jemalloc/releases/ .+/jemalloc-(\d\.\d+\.\d+).tar.bz2
+opts=searchmode=plain \
+https://api.github.com/repos/@PACKAGE@/@PACKAGE@/releases \
+https://github.com/@PACKAGE@/@PACKAGE@/releases/download/v?[\d.]+/@PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@
