@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: jemalloc
-Source: http://jemalloc.net/
+Source: https://jemalloc.net/
 
 Files: *
 Copyright: 2002-present Jason Evans <jasone@canonware.com>
@@ -167,7 +167,7 @@ License: BSD-3-Clause-Hiroshima-University
 Files: debian/*
 Copyright: 2011-2012 Stig Sandbeck Mathisen <ssm@debian.org>
            2012 Robert Edmonds <edmonds@debian.org>
-           2017-2023 Faidon Liambotis <paravoid@debian.org>
+           2017-2025 Faidon Liambotis <paravoid@debian.org>
 License: BSD-3-Clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
