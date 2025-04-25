@@ -1,2 +1,2 @@
-loongarch64-add-minimum-allocation-alignment.patch
+Disable-builtin-malloc-in-tests.patch
 hurd.patch
